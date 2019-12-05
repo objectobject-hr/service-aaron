@@ -126,19 +126,3 @@ class App extends React.Component {
 }
 
 export default App;
-
-
-// function App() {
-//   return (
-//     <Page>
-//       <Title>React Carousel</Title>
-//       <Carousel initialHeight={400} initialWidth={600}>
-//         <img src="https://unsplash.it/600/400/?image=110" />
-//         <img src="https://unsplash.it/600/400/?image=220" />
-//         <img src="https://unsplash.it/600/400/?image=330" />
-//         <img src="https://unsplash.it/600/400/?image=440" />
-//         <img src="https://unsplash.it/600/400/?image=550" />
-//       </Carousel>
-//     </Page>
-//   );
-// }
