@@ -3,8 +3,8 @@ import styled from 'styled-components';
 
 let IkeaArrow = styled.div`
   position: absolute;
-  top: 22rem;
-  right: 14rem;
+  top: 15rem;
+  left: 10rem;
   z-index: 999;
   cursor: pointer;
 `

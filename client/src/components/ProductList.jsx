@@ -6,7 +6,7 @@ import styled from 'styled-components';
 let StyledProducts = styled.div`
   display: flex;
   margin: 0 px;
-`
+`;
 
 const ProductList = (props) => {
   console.log(typeof props.allProducts)

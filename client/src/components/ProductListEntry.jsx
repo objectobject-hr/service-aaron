@@ -1,19 +1,35 @@
 import React from 'react';
 import styled from 'styled-components';
 
-let StyledItem = styled.div`
+const StyledItem = styled.div`
   padding: 20px;
-`
+`;
+
+const StyledProductName = styled.div`
+  font-family: sans-serif;
+  font-weight: 550;
+`;
+
+const StyledDescription = styled.div`
+  font-family: sans-serif;
+  font-size: 14px;
+`;
+
+const StyledPrice = styled.div`
+  font-family: sans-serif;
+  font-size: 26px;
+  font-weight: 700;
+`;
 
 const ProductListEntry = (props) => {
   console.log(props.product.itemimage)
   return (
       <StyledItem>
         <img src={props.product.itemimage} className="productimage" height="175" width="175"/>
-        <div className="productname">{props.product.itemname}</div>
-        <div className="producttypesize">{props.product.typesize}</div>
-        <div className="productname">{props.product.price}</div>
-        <div className="productname">{props.product.description}</div>
+        <StyledProductName>{props.product.itemname}</StyledProductName>
+        <StyledDescription>{props.product.description}</StyledDescription>
+        <StyledDescription>{props.product.typesize}</StyledDescription>
+        <StyledPrice>{props.product.price}</StyledPrice>
       </StyledItem>
   )
 }

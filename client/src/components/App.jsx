@@ -18,6 +18,19 @@ const Page = styled.div`
 const Title = styled.h1`
   text-align: center;
   margin-top: 1em;
+  font-family: sans-serif;
+`;
+
+const StyledCarousel = styled.div`
+
+`;
+
+const StyledOverflow = styled.div`
+  position: absolute;
+  height: 400px;
+  width: 865px;
+  overflow: hidden;
+  left: 13rem;
 `;
 
 class App extends React.Component {
@@ -41,7 +54,6 @@ class App extends React.Component {
       .then((response) => {
         this.setState({
           allProducts: response.data,
-          // shownProducts: response.data.splice(0,4)
         })
       })
       .catch((err) => console.error(err));
@@ -69,8 +81,9 @@ class App extends React.Component {
 
   nextView() {
     console.log(`clicked`)
-    // if(this.state.currentIndex === this.state.allProducts.length - 1) {
-    if(this.state.currentIndex === 1) {
+    console.log(this.state.currentIndex)
+    if(this.state.currentIndex > this.state.allProducts.length - 13) {
+    // if(this.state.currentIndex === 1) {
       return this.setState({
         currentIndex: 0,
         translateValue: 0
@@ -78,14 +91,14 @@ class App extends React.Component {
     }
     
     this.setState(prevState => ({
-      currentIndex: prevState.currentIndex + 1,
+      currentIndex: prevState.currentIndex + 4,
       translateValue: prevState.translateValue + -(this.slideWidth())
     }));
 
   }
 
   slideWidth() {
-    return document.querySelector('.carousel').clientWidth;
+    return document.querySelector('.StyledCarousel').clientWidth;
   }
 
   render() {
@@ -94,23 +107,23 @@ class App extends React.Component {
       return <div>loading...</div>
     } else {
       return (
-        <div>IKEA FRONT END CAPSTONE
-          <div className="carousel"
-            style={{
-              transform: `translateX(${this.state.translateValue}px)`,
-              transition: 'transform ease-out 0.45s'
-            }}>
+        <div>
+          <Title>
+            Similar Products
+          </Title>
+          
+          <StyledOverflow>
 
-            <ProductList allProducts={this.state.allProducts} />
-            
-            {/* {
-              this.state.allProducts.map((item, index) => {
-                <Carousel key={index} product={item} />
-  
-              })
-            } */}
-  
-          </div>
+            <StyledCarousel className="StyledCarousel"
+              style={{
+                transform: `translateX(${this.state.translateValue}px)`,
+                transition: 'transform ease-out 0.45s'
+              }}>
+              <ProductList allProducts={this.state.allProducts} />
+            </StyledCarousel>
+
+          </StyledOverflow>
+          
           <LeftArrow
             previousView={this.previousView}
           />
@@ -127,18 +140,3 @@ class App extends React.Component {
 
 export default App;
 
-
-// function App() {
-//   return (
-//     <Page>
-//       <Title>React Carousel</Title>
-//       <Carousel initialHeight={400} initialWidth={600}>
-//         <img src="https://unsplash.it/600/400/?image=110" />
-//         <img src="https://unsplash.it/600/400/?image=220" />
-//         <img src="https://unsplash.it/600/400/?image=330" />
-//         <img src="https://unsplash.it/600/400/?image=440" />
-//         <img src="https://unsplash.it/600/400/?image=550" />
-//       </Carousel>
-//     </Page>
-//   );
-// }
