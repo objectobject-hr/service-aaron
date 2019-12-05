@@ -1,9 +1,10 @@
 const express = require('express');
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
-const db = require('../server/index.js');
 const router = require('./router.js');
 const path = require('path');
+const db = require('../server/index.js');
+
 
 const app = express();
 const port = 3001;
