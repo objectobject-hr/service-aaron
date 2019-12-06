@@ -3,6 +3,13 @@ import styled from 'styled-components';
 
 const StyledItem = styled.div`
   padding: 20px;
+  z-index: 3;
+  &:hover {
+    .productimage {
+      
+      transform: scale(1.06);
+    }
+  }
 `;
 
 const StyledProductName = styled.div`
@@ -22,7 +29,7 @@ const StyledPrice = styled.div`
 `;
 
 const ProductListEntry = (props) => {
-  console.log(props.product.itemimage)
+  // console.log(props.product.itemimage)
   return (
       <StyledItem>
         <img src={props.product.itemimage} className="productimage" height="175" width="175"/>

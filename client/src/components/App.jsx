@@ -1,10 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import ProductList from './ProductList.jsx';
 import axios from 'axios';
-import data from '../data/data.js';
-import RightArrow from './RightArrow.jsx';
-import LeftArrow from './LeftArrow.jsx';
+import SimilarProducts from './SimilarProducts.jsx';
+import YouMightAlsoLike from './YouMightAlsoLike.jsx';
 
 
 const Page = styled.div`
@@ -19,18 +17,19 @@ const Title = styled.h1`
   text-align: center;
   margin-top: 1em;
   font-family: sans-serif;
+  z-index: -999;
 `;
 
-const StyledCarousel = styled.div`
-
+const Title2 = styled.h1`
+  text-align: center;
+  margin-top: 16em;
+  font-family: sans-serif;
+  z-index: -999;
 `;
 
-const StyledOverflow = styled.div`
+const SecondCarousel = styled.div`
   position: absolute;
-  height: 400px;
-  width: 865px;
-  overflow: hidden;
-  left: 13rem;
+  margin-top: 0.5em;
 `;
 
 class App extends React.Component {
@@ -44,8 +43,6 @@ class App extends React.Component {
       translateValue: 0
     }
 
-    this.previousView = this.previousView.bind(this);
-    this.nextView = this.nextView.bind(this);
   }
 
   getAll() {
@@ -63,44 +60,6 @@ class App extends React.Component {
     this.getAll();
   }
 
-  previousView() {
-    console.log(`clicked`)
-    // if(this.state.currentIndex === this.state.allProducts.length - 1) {
-    if(this.state.currentIndex === 0) {
-      return this.setState({
-        currentIndex: 0,
-        translateValue: 0
-      })
-    }
-    
-    this.setState(prevState => ({
-      currentIndex: prevState.currentIndex - 1,
-      translateValue: prevState.translateValue - -(this.slideWidth())
-    }));
-  }
-
-  nextView() {
-    console.log(`clicked`)
-    console.log(this.state.currentIndex)
-    if(this.state.currentIndex > this.state.allProducts.length - 13) {
-    // if(this.state.currentIndex === 1) {
-      return this.setState({
-        currentIndex: 0,
-        translateValue: 0
-      })
-    }
-    
-    this.setState(prevState => ({
-      currentIndex: prevState.currentIndex + 4,
-      translateValue: prevState.translateValue + -(this.slideWidth())
-    }));
-
-  }
-
-  slideWidth() {
-    return document.querySelector('.StyledCarousel').clientWidth;
-  }
-
   render() {
     console.log(this.state.allProducts)
     if (this.state.allProducts.length < 1 || this.state.allProducts === undefined) {
@@ -111,25 +70,18 @@ class App extends React.Component {
           <Title>
             Similar Products
           </Title>
-          
-          <StyledOverflow>
 
-            <StyledCarousel className="StyledCarousel"
-              style={{
-                transform: `translateX(${this.state.translateValue}px)`,
-                transition: 'transform ease-out 0.45s'
-              }}>
-              <ProductList allProducts={this.state.allProducts} />
-            </StyledCarousel>
+          <SimilarProducts />
 
-          </StyledOverflow>
-          
-          <LeftArrow
-            previousView={this.previousView}
-          />
-          <RightArrow
-            nextView={this.nextView}
-          />
+          <Title2>
+            You Might Also Like
+          </Title2>
+
+          <SecondCarousel>
+            <YouMightAlsoLike />
+
+          </SecondCarousel>
+
         </div>
       );
 

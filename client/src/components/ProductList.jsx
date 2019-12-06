@@ -9,9 +9,9 @@ let StyledProducts = styled.div`
 `;
 
 const ProductList = (props) => {
-  console.log(typeof props.allProducts)
-  console.log(props.allProducts)
-  console.log(props.allProducts[0])
+  // console.log(typeof props.allProducts)
+  // console.log(props.allProducts)
+  // console.log(props.allProducts[0])
 
   if (props.allProducts[0] === undefined) {
     return null
