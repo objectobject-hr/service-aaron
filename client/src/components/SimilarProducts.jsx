@@ -5,6 +5,7 @@ import axios from 'axios';
 import data from '../data/data.js';
 import RightArrow from './RightArrow.jsx';
 import LeftArrow from './LeftArrow.jsx';
+import testData from '../data/testData.js'
 
 let StyledActive = styled.div`
   padding-left: 100px;
@@ -28,7 +29,7 @@ class SimilarProducts extends React.Component {
     super(props);
 
     this.state = {
-      allProducts: [],
+      allProducts: testData.products,
       shownProducts: [],
       currentIndex: 0,
       translateValue: 0
@@ -41,11 +42,11 @@ class SimilarProducts extends React.Component {
   getAll() {
     axios.get('/products')
       // .then((response) => console.log(response.data))
-      .then((response) => {
-        this.setState({
-          allProducts: response.data,
-        })
-      })
+      // .then((response) => {
+      //   this.setState({
+      //     allProducts: response.data,
+      //   })
+      // })
       .catch((err) => console.error(err));
   }
 

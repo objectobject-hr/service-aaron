@@ -4,6 +4,7 @@ import MightLikeProductList from './MightLikeProductList.jsx';
 import axios from 'axios';
 import YouLikeRightArrow from './YouLikeRightArrow.jsx';
 import YouLikeLeftArrow from './YouLikeLeftArrow.jsx';
+import testData from '../data/testData.js'
 
 const StyledCarousel2 = styled.div`
   position: absolute;
@@ -23,7 +24,7 @@ class YouMightAlsoLike extends React.Component {
     super(props);
 
     this.state = {
-      allLikedProducts: [],
+      allLikedProducts: testData.products,
       shownProducts: [],
       currentYouLikeIndex: 0,
       translateValue: 0
@@ -49,13 +50,10 @@ class YouMightAlsoLike extends React.Component {
   getAllYouLike() {
     axios.get('/products')
       // .then((response) => console.log(response.data))
-      .then((response) => {
-        this.setState({
-          allLikedProducts: this.shuffleArray(response.data)
-        })
-      })
-      // .then(() => {
-      //   this.shuffleArray(this.state.allLikedProducts)
+      // .then((response) => {
+      //   this.setState({
+      //     allLikedProducts: this.shuffleArray(response.data)
+      //   })
       // })
       .catch((err) => console.error(err));
   }

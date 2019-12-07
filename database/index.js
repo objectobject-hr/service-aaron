@@ -13,7 +13,8 @@ let ikeaSchema = new mongoose.Schema({
   itemname: { type: String, unique: true },
   typesize: String,
   price: Number,
-  description: String
+  description: String,
+  rating: Number
 });
 
 let Item = mongoose.model('Item', ikeaSchema);
@@ -43,7 +44,8 @@ module.exports = {
         itemname: req.body.itemname,
         typesize: req.body.typesize,
         price: req.body.price,
-        description: req.body.description
+        description: req.body.description,
+        rating: req.body.rating
       }, (err, results) => {
         if (err) {
           console.log(`you're in Item.create if-statement`)

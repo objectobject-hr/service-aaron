@@ -3,6 +3,8 @@ import styled from 'styled-components';
 import axios from 'axios';
 import SimilarProducts from './SimilarProducts.jsx';
 import YouMightAlsoLike from './YouMightAlsoLike.jsx';
+import testData from '../data/testData.js';
+import data from '../data/data.js'
 
 
 const Page = styled.div`
@@ -37,27 +39,26 @@ class App extends React.Component {
     super(props);
 
     this.state = {
-      allProducts: [],
-      shownProducts: [],
-      currentIndex: 0,
-      translateValue: 0
+      allProducts: testData.products,
+      shownProducts: []
     }
 
   }
 
   getAll() {
     axios.get('/products')
-      // .then((response) => console.log(response.data))
-      .then((response) => {
-        this.setState({
-          allProducts: response.data,
-        })
-      })
+      .then((response) => console.log(response.data))
+      // .then((response) => {
+      //   this.setState({
+      //     allProducts: response.data,
+      //   })
+      // })
       .catch((err) => console.error(err));
   }
 
   componentDidMount() {
-    this.getAll();
+    // this.getAll();
+    console.log(`actual allProducts: `, this.state.allProducts)
   }
 
   render() {
