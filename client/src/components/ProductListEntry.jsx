@@ -78,7 +78,7 @@ const ProductListEntry = (props) => {
         <StyledProductName className="productname">{props.product.itemname}</StyledProductName>
         <StyledDescription>{props.product.description}</StyledDescription>
         <StyledDescription>{props.product.typesize}</StyledDescription>
-        <StyledPrice>{props.product.price}</StyledPrice>
+        <StyledPrice>${props.product.price}</StyledPrice>
         <Span>{ratingHandler(props.product.rating)} &nbsp; {props.product.rating} </Span>
       </StyledItem>
   )

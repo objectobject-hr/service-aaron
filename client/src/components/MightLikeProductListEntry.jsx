@@ -78,7 +78,7 @@ const MightLikeProductListEntry = (props) => {
       <StyledLikeName className="productname">{props.MightLikeProduct.itemname}</StyledLikeName>
       <StyledLikeDescription>{props.MightLikeProduct.description}</StyledLikeDescription>
       <StyledLikeDescription>{props.MightLikeProduct.typesize}</StyledLikeDescription>
-      <StyledLikePrice>{props.MightLikeProduct.price}</StyledLikePrice>
+      <StyledLikePrice>${props.MightLikeProduct.price}</StyledLikePrice>
       <Span>{ratingHandler(props.MightLikeProduct.rating)} &nbsp; {props.MightLikeProduct.rating} </Span>
     </StyledLikeItem>
   )

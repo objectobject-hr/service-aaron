@@ -43,7 +43,8 @@ const History = styled.div`
 
 const StyledFooter = styled.div`
   position: absolute;
-  top: 75em;
+  margin: -7px;
+  top: 75.5em;
   height: 600px;
   width: 100%;
   background-color: #0058a3;
