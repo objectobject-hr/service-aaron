@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost/ikeafec');
+mongoose.connect('mongodb://localhost/ikeaproducts', {useNewUrlParser: true});
 
 const db = mongoose.connection;
 
@@ -17,11 +17,13 @@ let ikeaSchema = new mongoose.Schema({
   rating: Number
 });
 
-let Item = mongoose.model('Item', ikeaSchema);
+let Product = mongoose.model('Product', ikeaSchema);
 
 module.exports = {
+  Product,
+  
   getAll: (req, callback) => {
-    Item.find({})
+    Product.find({})
     .exec((err, results) => {
       if (err) {
         console.log(`error in database index.getAll: `, err)
@@ -39,7 +41,7 @@ module.exports = {
     console.log(req.body)
 
     // req.body.forEach((item, index) => {
-      Item.create({
+      Product.create({
         itemimage: req.body.itemimage,
         itemname: req.body.itemname,
         typesize: req.body.typesize,
@@ -48,14 +50,26 @@ module.exports = {
         rating: req.body.rating
       }, (err, results) => {
         if (err) {
-          console.log(`you're in Item.create if-statement`)
+          console.log(`you're in Product.create if-statement`)
           callback(err)
         } else {
-          console.log(`you're in Item.create else-statement`)
+          console.log(`you're in Product.create else-statement`)
           callback(null, results)
         }
       })
     // })
+  },
+
+  deleteAll: (req, callback) => {
+    Product.remove({}, (err, results) => {
+      if (err) {
+        console.log(`you're in Product.remove if-statement`)
+        callback(err)
+      } else {
+        console.log(`you're in Product.remove else-statement`)
+        callback(null, results)
+      }
+    })
   }
 
 };

@@ -22,24 +22,24 @@ const StyledLikeItem = styled.div`
 `;
 
 const StyledLikeName = styled.div`
-  font-family: sans-serif;
+  font-family: 'Noto Sans', sans-serif;
   font-weight: 550;
 `;
 
 const StyledLikeDescription = styled.div`
-  font-family: sans-serif;
+  font-family: 'Noto Sans', sans-serif;
   font-size: 14px;
 `;
 
 const StyledLikePrice = styled.div`
-  font-family: sans-serif;
+  font-family: 'Noto Sans', sans-serif;
   font-size: 26px;
   font-weight: 700;
 `;
 
 const Span = styled.span`
   display: flex;
-  font-family: sans-serif;
+  font-family: 'Noto Sans', sans-serif;
   font-size: 20px;
 `;
 
@@ -73,14 +73,14 @@ const ratingHandler = (unroundedRate) => {
 const MightLikeProductListEntry = (props) => {
   // console.log(props.MightLikeProduct.itemimage)
   return (
-      <StyledLikeItem>
-        <img src={props.MightLikeProduct.itemimage} className="productimage" height="175" width="175"/>
-        <StyledLikeName className="productname">{props.MightLikeProduct.itemname}</StyledLikeName>
-        <StyledLikeDescription>{props.MightLikeProduct.description}</StyledLikeDescription>
-        <StyledLikeDescription>{props.MightLikeProduct.typesize}</StyledLikeDescription>
-        <StyledLikePrice>{props.MightLikeProduct.price}</StyledLikePrice>
-        <Span>{ratingHandler(props.MightLikeProduct.rating)} &nbsp; {props.MightLikeProduct.rating} </Span>
-      </StyledLikeItem>
+    <StyledLikeItem >
+      <img src={props.MightLikeProduct.itemimage} className="productimage" height="175" width="175"/>
+      <StyledLikeName className="productname">{props.MightLikeProduct.itemname}</StyledLikeName>
+      <StyledLikeDescription>{props.MightLikeProduct.description}</StyledLikeDescription>
+      <StyledLikeDescription>{props.MightLikeProduct.typesize}</StyledLikeDescription>
+      <StyledLikePrice>{props.MightLikeProduct.price}</StyledLikePrice>
+      <Span>{ratingHandler(props.MightLikeProduct.rating)} &nbsp; {props.MightLikeProduct.rating} </Span>
+    </StyledLikeItem>
   )
 }
 

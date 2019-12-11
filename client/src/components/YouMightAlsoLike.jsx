@@ -13,7 +13,7 @@ const StyledCarousel2 = styled.div`
 
 const StyledOverflow2 = styled.div`
   position: absolute;
-  height: 800px;
+  height: 550px;
   width: 865px;
   left: 13rem;
   overflow: hidden;
@@ -24,7 +24,8 @@ class YouMightAlsoLike extends React.Component {
     super(props);
 
     this.state = {
-      allLikedProducts: testData.products,
+      // allLikedProducts: testData.products,
+      allLikedProducts: [],
       shownProducts: [],
       currentYouLikeIndex: 0,
       translateValue: 0
@@ -50,11 +51,11 @@ class YouMightAlsoLike extends React.Component {
   getAllYouLike() {
     axios.get('/products')
       // .then((response) => console.log(response.data))
-      // .then((response) => {
-      //   this.setState({
-      //     allLikedProducts: this.shuffleArray(response.data)
-      //   })
-      // })
+      .then((response) => {
+        this.setState({
+          allLikedProducts: this.shuffleArray(response.data)
+        })
+      })
       .catch((err) => console.error(err));
   }
 

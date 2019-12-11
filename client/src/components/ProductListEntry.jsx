@@ -22,24 +22,24 @@ const StyledItem = styled.div`
 `;
 
 const StyledProductName = styled.div`
-  font-family: sans-serif;
+  font-family: 'Noto Sans', sans-serif;
   font-weight: 550;
 `;
 
 const StyledDescription = styled.div`
-  font-family: sans-serif;
+  font-family: 'Noto Sans', sans-serif;
   font-size: 14px;
 `;
 
 const StyledPrice = styled.div`
-  font-family: sans-serif;
+  font-family: 'Noto Sans', sans-serif;
   font-size: 26px;
   font-weight: 700;
 `;
 
 const Span = styled.span`
   display: flex;
-  font-family: sans-serif;
+  font-family: 'Noto Sans', sans-serif;
   font-size: 20px;
 `;
 

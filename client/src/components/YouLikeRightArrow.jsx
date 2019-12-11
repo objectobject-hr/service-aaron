@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const YouLikeArrow = styled.div`
   position: absolute;
   top: 10rem;
-  left: 68rem;
+  left: 67rem;
   z-index: 99;
   cursor: pointer;
   height: 30px;

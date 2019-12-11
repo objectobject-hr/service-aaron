@@ -5,6 +5,8 @@ import SimilarProducts from './SimilarProducts.jsx';
 import YouMightAlsoLike from './YouMightAlsoLike.jsx';
 import testData from '../data/testData.js';
 import data from '../data/data.js'
+import ShowAllHistory from '../components/ShowAllHistory.jsx';
+import Footer from './Footer.jsx';
 
 
 const Page = styled.div`
@@ -18,20 +20,33 @@ const Page = styled.div`
 const Title = styled.h1`
   text-align: center;
   margin-top: 1em;
-  font-family: sans-serif;
+  font-family: 'Noto Sans', sans-serif;
   z-index: -999;
 `;
 
 const Title2 = styled.h1`
   text-align: center;
   margin-top: 16em;
-  font-family: sans-serif;
+  font-family: 'Noto Sans', sans-serif;
   z-index: -999;
 `;
 
 const SecondCarousel = styled.div`
   position: absolute;
   margin-top: 0.5em;
+`;
+
+const History = styled.div`
+  position: relative;
+  margin-top: 29em;
+`;
+
+const StyledFooter = styled.div`
+  position: absolute;
+  top: 75em;
+  height: 600px;
+  width: 100%;
+  background-color: #0058a3;
 `;
 
 class App extends React.Component {
@@ -83,6 +98,13 @@ class App extends React.Component {
 
           </SecondCarousel>
 
+          <History>
+            <ShowAllHistory />
+          </History>
+          
+          <StyledFooter>
+            <Footer></Footer>
+          </StyledFooter>
         </div>
       );
 

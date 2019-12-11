@@ -29,7 +29,8 @@ class SimilarProducts extends React.Component {
     super(props);
 
     this.state = {
-      allProducts: testData.products,
+      // allProducts: testData.products,
+      allProducts: [],
       shownProducts: [],
       currentIndex: 0,
       translateValue: 0
@@ -42,11 +43,11 @@ class SimilarProducts extends React.Component {
   getAll() {
     axios.get('/products')
       // .then((response) => console.log(response.data))
-      // .then((response) => {
-      //   this.setState({
-      //     allProducts: response.data,
-      //   })
-      // })
+      .then((response) => {
+        this.setState({
+          allProducts: response.data,
+        })
+      })
       .catch((err) => console.error(err));
   }
 
