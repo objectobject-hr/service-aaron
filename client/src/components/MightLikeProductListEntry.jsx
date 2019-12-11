@@ -40,7 +40,7 @@ const StyledLikePrice = styled.div`
 const Span = styled.span`
   display: flex;
   font-family: 'Noto Sans', sans-serif;
-  font-size: 20px;
+  font-size: 15px;
 `;
 
 const round = (x, precision) => {
@@ -79,7 +79,7 @@ const MightLikeProductListEntry = (props) => {
       <StyledLikeDescription>{props.MightLikeProduct.description}</StyledLikeDescription>
       <StyledLikeDescription>{props.MightLikeProduct.typesize}</StyledLikeDescription>
       <StyledLikePrice>${props.MightLikeProduct.price}</StyledLikePrice>
-      <Span>{ratingHandler(props.MightLikeProduct.rating)} &nbsp; {props.MightLikeProduct.rating} </Span>
+      <Span>{ratingHandler(props.MightLikeProduct.rating)} &nbsp; {props.MightLikeProduct.rating} &nbsp; ({props.MightLikeProduct.numberRatings}) </Span>
     </StyledLikeItem>
   )
 }

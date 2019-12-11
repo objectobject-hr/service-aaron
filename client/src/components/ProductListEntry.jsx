@@ -40,7 +40,7 @@ const StyledPrice = styled.div`
 const Span = styled.span`
   display: flex;
   font-family: 'Noto Sans', sans-serif;
-  font-size: 20px;
+  font-size: 15px;
 `;
 
 const round = (x, precision) => {
@@ -79,7 +79,7 @@ const ProductListEntry = (props) => {
         <StyledDescription>{props.product.description}</StyledDescription>
         <StyledDescription>{props.product.typesize}</StyledDescription>
         <StyledPrice>${props.product.price}</StyledPrice>
-        <Span>{ratingHandler(props.product.rating)} &nbsp; {props.product.rating} </Span>
+        <Span>{ratingHandler(props.product.rating)} &nbsp; {props.product.rating} &nbsp; ({props.product.numberRatings})</Span>
       </StyledItem>
   )
 }

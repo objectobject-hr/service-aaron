@@ -20,19 +20,20 @@ const images = ['https://www.ikea.com/us/en/images/products/ypperlig-table__0737
 'https://www.ikea.com/us/en/images/products/moeckelby-table-oak__0737107_PE740885_S5.JPG?f=s'
 ];
 const productname = ['YPPERLIG', 'TINGBY', 'MORBYLANGA', 'EKEDALEN', 'MARKERAD', 'GAMLEBY', 'TORSBY', 'KEJSARKRONA', 'YPPERLIG ARM CHAIR', 'BEKANT', 'LISABO', 'YPPERLIG BENCH', 'NILSOVE', 'YPPERLIG STOOL', 'EKEDALEN BAR TABLE', 'MOCKLEBY' ];
-const typesize = ['10x12x5', '9x14x6', '15x12x6', '18x13x5', '5x6x4', '9x8x3', '10x6x3', '12x12x5', '9x4x5', '7x4x4', '14x5x6']
+const adj = ['RED', 'BLUE', 'GREEN', 'MATTE', 'SHINY', 'RARE', 'COMMON', 'UNCOMMON', 'HIGH', 'LOW', 'FIRE', 'WATER', 'GRASS', 'ELECTRIC', 'GHOST', 'PSYCHIC', 'FIGHTING', 'BUG', 'FAIRY', 'STEEL', 'POISON', 'FLYING', 'DRAGON', 'NORMAL', 'DARK', 'ROCK']
+const typesize = ["10'x12'x5'", "9'x14'x6'", "15'x12'x6'", "18'x13'x5'", "5'x6'x4'", "9'x8'x3'", "10'x6'x3'", "12'x12'x5'", "9'x4'x5'", "7'x4'x4'", "14'x5'x6'"]
 const description = ['goes well with garden', 'comfortable', 'lol why are  you even looking at this', 'table/chair piece', 'you will like this', 'you can afford this', `don't let the price stop you`, 'lmao I have one at home', 'this might not be a good idea', 'this a good idea', 'look for a matching set', 'mm this is cute', 'summer vibes', 'will you use this lol', `you probably won't ever use this`, 'wait lol what??', 'this is nice', 'niiiiice', `this ain't a bad idea`, 'this goes haaaaard'];
 const price = [299.99, 199.99, 200.00, 799.99, 79.99, 399.99, 575.00, 275.99, 799.99, 150.00, 675.99, 255.99, 400.00, 300.00, 99.99];
-const ratings = [2, 2.5, 3, 3.5, 4, 4.5, 5];
+const ratings = [2.0, 2.2, 2.5, 2.7, 3.0, 3.1, 3.5, 3.8, 4.0, 4,2, 4.5, 4.6, 5.0];
 const numberRatings = [23, 43, 12, 32, 67, 47, 39, 18, 21, 37, 48, 26, 53, 28, 26, 19, 16, 36, 41];
 
 const data = [];
 
 const createProducts = () => {
-  for (var i = 0; i < productname.length; i++) {
+  for (var i = 0; i < 50; i++) {
     data.push({
-      itemimage: images[i],
-      itemname: productname[i],
+      itemimage: images[Math.floor(Math.random() * images.length)],
+      itemname: adj[Math.floor(Math.random() * adj.length)] + ' ' + productname[Math.floor(Math.random() * productname.length)],
       typesize: typesize[Math.floor(Math.random() * typesize.length)],
       description: description[Math.floor(Math.random() * description.length)],
       price: price[Math.floor(Math.random() * price.length)],

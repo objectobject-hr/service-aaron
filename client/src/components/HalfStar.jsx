@@ -2,8 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 
 const StyledHalf = styled.div`
-  height: 25px;
-  width: 25px;
+  height: 20px;
+  width: 20px;
 `;
 
 const Svg = styled.svg`
