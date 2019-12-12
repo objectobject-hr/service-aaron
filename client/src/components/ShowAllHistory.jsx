@@ -44,13 +44,15 @@ class ShowAllHistory extends React.Component {
 
   render() {
     return (
-      <div>
-        <div className="as-styledHistory">
-          {this.state.latestHistory.map((item, index) => (
-            <ShowAllHistoryEntry product={item} key={index} />
-          ))}
-        </div>
-        <div className="as-styledShowHistory">Show all history</div>
+      <div className="as-showHistoryWrapper">
+        {/* <span> */}
+          <div className="as-styledHistory">
+            {this.state.latestHistory.map((item, index) => (
+              <ShowAllHistoryEntry product={item} key={index} />
+            ))}
+          </div>
+          <span className="as-styledShowHistory">Show all history</span>
+        {/* </span> */}
       </div>
     )
   }

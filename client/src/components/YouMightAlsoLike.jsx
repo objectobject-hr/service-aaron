@@ -85,7 +85,7 @@ class YouMightAlsoLike extends React.Component {
   }
 
   slideWidth() {
-    return document.querySelector('.StyledCarousel').clientWidth;
+    return document.querySelector('.as-styledSimilarProductsCarousel').clientWidth;
   }
 
 
@@ -95,25 +95,27 @@ class YouMightAlsoLike extends React.Component {
       return <div>loading...</div>
     } else {
       return (
-        <div>
-          <div className="as-styledYouMightAlsoLikeOverflow">
+        <div className="as-youMightAlsoLikeDIV">
 
-            <div className="StyledCarousel2"
+          <div>
+            <YouLikeLeftArrow previousYouLikeView={this.previousYouLikeView} />
+          </div>
+
+          <div className="as-styledYouMightAlsoLikeOverflow">
+            <div className="as-styledCarousel2"
               style={{
                 transform: `translateX(${this.state.translateValue}px)`,
-                transition: 'transform ease-out 0.45s'
+                transition: 'transform ease-out 0.45s',
+                // backgroundColor: "green"
               }}>
               <MightLikeProductList allLikedProducts={this.state.allLikedProducts} />
             </div>
-
           </div>
           
-          <YouLikeLeftArrow
-            previousYouLikeView={this.previousYouLikeView}
-          />
-          <YouLikeRightArrow
-            nextYouLikeView={this.nextYouLikeView}
-          />
+          <div>
+            <YouLikeRightArrow nextYouLikeView={this.nextYouLikeView} />
+          </div>
+
         </div>
       )
     }

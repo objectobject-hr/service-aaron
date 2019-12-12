@@ -2,27 +2,63 @@
   overflow-x: hidden;
 } */
 
+.as-everythingContainer {
+  /* background-color: purple */
+}
+
 .as-title {
-    text-align: center;
-    margin-top: 1em;
-    font-family: 'Noto Sans', sans-serif;
-    z-index: -999;
+  text-align: center;
+  /* margin-top: 1em; */
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 30;
+  z-index: -999;
+}
+
+.as-similarProductsDIV {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  /* height: 400px; */
+  /* width: 100%; */
+  /* background-color: yellow; */
+}
+
+.as-youMightAlsoLikeDIV{
+  /* position: 'absolute'; */
+  /* marginTop: '0.5em', */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  /* background-color: skyblue; */
 }
 
 .as-styledSimilarProductsOverflow {
-  position: absolute;
+  /* position: absolute; */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
   height: 400px;
   width: 865px;
   overflow: hidden;
-  left: 13rem;
+  /* left: 13rem; */
+  /* background-color: blue; */
 }
 
 .as-styledYouMightAlsoLikeOverflow {
-  position: absolute;
-  height: 550px;
+  /* position: absolute; */
+  height: 400px;
   width: 865px;
-  left: 13rem;
+  /* left: 13rem; */
   overflow: hidden;
+  /* background-color: orange; */
+}
+
+.as-footerWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
 
 .as-styledProductList {
@@ -81,9 +117,9 @@
 }
 
 .as-similarProductLeftArrow {
-  position: absolute;
+  /* position: absolute;
   top: 15rem;
-  left: 10rem;
+  left: 10rem; */
   z-index: 99;
   cursor: pointer;
   height: 60px;
@@ -91,19 +127,19 @@
 }
 
 .as-similarProductLeftArrowSVG {
-  position: absolute;
-  top: 1.15rem;
-  left: 1.15rem;
+  position: relative;
+  top: 16px;
+  left: 16px;
   height: 30px;
   width: 30px;
 }
 
 .as-similarProductLeftCircle {
-  position: absolute;
+  /* position: absolute; */
   height: 60px;
   width: 60px;
-  top: -1rem;
-  left: 0rem;
+  top: -10px;
+  left: -10px;
   border-radius: 200%;
 }
 
@@ -112,25 +148,25 @@
 }
 
 .as-similarProductRightArrow {
-  position: absolute;
+  /* position: absolute;
   top: 15rem;
-  right: 11rem;
+  right: 11rem; */
   z-index: 99;
   cursor: pointer;
-  height: 30px;
-  width: 30px;
+  height: 60px;
+  width: 60px;
 }
 
 .as-similarProductRightArrowSVG {
-  position: absolute;
-  top: 1.15rem;
-  left: 1.15rem;
+  position: relative;
+  top: 16px;
+  left: 16px;
   height: 30px;
   width: 30px;
 }
 
 .as-similarProductRightCircle {
-  position: absolute;
+  /* position: absolute; */
   height: 60px;
   width: 60px;
   top: -1rem;
@@ -143,30 +179,29 @@
 }
 
 .as-youMightLikeLeftArrow {
-  position: absolute;
-  top: 10rem;
-  left: 10rem;
+  /* position: absolute;
+  top: 15rem;
+  left: 10rem; */
   z-index: 99;
   cursor: pointer;
   height: 60px;
   width: 60px;
-  border-radius: 200%;
 }
 
 .as-youMightLikeLeftArrowSVG {
-  position: absolute;
-  top: 1.15rem;
-  left: 1.15rem;
+  position: relative;
+  top: 16px;
+  left: 16px;
   height: 30px;
   width: 30px;
 }
 
 .as-youMightLikeLeftCircle {
-  position: absolute;
+  /* position: absolute; */
   height: 60px;
   width: 60px;
-  top: -1rem;
-  left: 0rem;
+  top: -10px;
+  left: -10px;
   border-radius: 200%;
 }
 
@@ -175,25 +210,25 @@
 }
 
 .as-youMightLikeRightArrow {
-  position: absolute;
-  top: 10rem;
-  left: 67rem;
+  /* position: absolute;
+  top: 15rem;
+  right: 11rem; */
   z-index: 99;
   cursor: pointer;
-  height: 30px;
-  width: 30px;
+  height: 60px;
+  width: 60px;
 }
 
 .as-youMightLikeRightArrowSVG {
-  position: absolute;
-  top: 1.15rem;
-  left: 1.15rem;
+  position: relative;
+  top: 16px;
+  left: 16px;
   height: 30px;
   width: 30px;
 }
 
 .as-youMightLikeRightCircle {
-  position: absolute;
+  /* position: absolute; */
   height: 60px;
   width: 60px;
   top: -1rem;
@@ -205,21 +240,37 @@
   background-color: #bbb;
 }
 
+.as-showHistoryWrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.as-showAllHistory {
+  display: flex;
+  flex-direction: row;
+  height: 100;
+  /* background-color: pink; */
+}
+
 .as-styledHistory {
-  position: absolute;
+  /* position: absolute; */
   display: flex;
   height: 100px;
-  width: 800px;
-  left: 1rem;
+  /* width: 800px; */
+  margin-left: 20px;
   cursor: pointer;  
 }
 
 .as-styledShowHistory {
-  position: absolute;
-  top: 2rem;
-  left: 66rem;
+  position: relative;
+  /* top: 2rem; */
+  /* width: 100px; */
+  margin-left: 20px;
   font-family: 'Noto Sans', sans-serif;
   color: #0058a3;
+  /* color: red; */
   font-weight: 900;
   z-index: 10;
   cursor: pointer;
@@ -233,12 +284,24 @@
 .as-styledHistoryEntry {
   padding: 15px;
   transition: transform .2s; /* Animation */
-  margin: 0 auto;
+  /* margin: 0 auto; */
+  /* margin-left: */
   cursor: pointer;
 }
 
 .as-styledHistoryEntry:hover .as-styledHistoryProductImage {
   transform: scale(1.06);
+}
+
+.as-helpFamily {
+  /* flex-grow: 1; */
+  margin-top: 100px;
+}
+
+.as-helpSpan {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
 }
 
 .as-styledHelpIcon {
@@ -248,13 +311,13 @@
   fill: white;
   stroke: none;
 
-  position: absolute;
+  /* position: absolute; */
   top: 100px;
   left: 60px;
 }
 
 .as-styledHelp {
-  position: absolute;
+  /* position: absolute; */
   top: 105px;
   left: 105px;
   font-family: 'Noto Sans', sans-serif;
@@ -263,9 +326,12 @@
 }
 
 .as-styledHelpList {
-  position: absolute;
+  /* position: absolute; */
   top: 150px;
   left: 60px;
+  font-family: 'Noto Sans', sans-serif;
+  color: white;
+  line-height: 200%;
 }
 
 .as-styledHelpListEntry {
@@ -278,6 +344,17 @@
   text-decoration: underline;
 }
 
+.as-shopFamily {
+  /* flex-grow: 1; */
+  margin-top: 100px;
+}
+
+.as-shopSpan {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+}
+
 .as-styledShopIcon {
   height: 2.25rem;
   width: 2.25rem;
@@ -285,13 +362,13 @@
   fill: white;
   stroke: none;
   
-  position: absolute;
+  /* position: absolute; */
   top: 100px;
   left: 375px;
 }
 
 .as-styledShop {
-  position: absolute;
+  /* position: absolute; */
   top: 105px;
   left: 420px;
   font-family: 'Noto Sans', sans-serif;
@@ -300,7 +377,7 @@
 }
 
 .as-styledShopList {
-  position: absolute;
+  /* position: absolute; */
   top: 150px;
   left: 375px;
   font-family: 'Noto Sans', sans-serif;
@@ -318,6 +395,17 @@
   text-decoration: underline;
 }
 
+.as-aboutFamily {
+  /* flex-grow: 1; */
+  margin-top: 100px;
+}
+
+.as-aboutSpan {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+}
+
 .as-styledAboutIcon {
   height: 2.25rem;
   width: 2.25rem;
@@ -325,13 +413,13 @@
   fill: white;
   stroke: none;
   
-  position: absolute;
+  /* position: absolute; */
   top: 100px;
   left: 700px;
 }
 
 .as-styledAbout {
-  position: absolute;
+  /* position: absolute; */
   top: 105px;
   left: 750px;
   font-family: 'Noto Sans', sans-serif;
@@ -340,7 +428,7 @@
 }
 
 .as-styledAboutList {
-  position: absolute;
+  /* position: absolute; */
   top: 150px;
   left: 700px;
   font-family: 'Noto Sans', sans-serif;
@@ -358,6 +446,17 @@
   text-decoration: underline;
 }
 
+.as-infoFamily {
+  /* flex-grow: 1; */
+  margin-top: 100px;
+}
+
+.as-infoSpan {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+}
+
 .as-styledInfoIcon {
   height: 2.25rem;
   width: 2.25rem;
@@ -365,13 +464,13 @@
   fill: white;
   stroke: none;
   
-  position: absolute;
+  /* position: absolute; */
   top: 100px;
   left: 980px;
 }
 
 .as-styledInfo {
-  position: absolute;
+  /* position: absolute; */
   top: 105px;
   left: 1025px;
   font-family: 'Noto Sans', sans-serif;
@@ -380,7 +479,7 @@
 }
 
 .as-styledInfoList {
-  position: absolute;
+  /* position: absolute; */
   top: 150px;
   left: 980px;
   font-family: 'Noto Sans', sans-serif;

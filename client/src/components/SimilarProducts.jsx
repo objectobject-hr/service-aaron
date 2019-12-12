@@ -73,7 +73,7 @@ class SimilarProducts extends React.Component {
   }
 
   slideWidth() {
-    return document.querySelector('.StyledCarousel').clientWidth;
+    return document.querySelector('.as-styledSimilarProductsCarousel').clientWidth;
   }
 
 
@@ -83,25 +83,27 @@ class SimilarProducts extends React.Component {
       return <div>loading...</div>
     } else {
       return (
-        <div>
-          <div className="as-styledSimilarProductsOverflow">
+        <div className="as-similarProductsDIV">
 
+          <div className="as-positionedSimilarLeftArrow">
+            <LeftArrow previousView={this.previousView} />
+          </div>
+
+          <div className="as-styledSimilarProductsOverflow">
             <div className="as-styledSimilarProductsCarousel"
               style={{
                 transform: `translateX(${this.state.translateValue}px)`,
-                transition: 'transform ease-out 0.45s'
+                transition: 'transform ease-out 0.45s',
+                // backgroundColor: 'green'
               }}>
               <ProductList allProducts={this.state.allProducts} />
             </div>
-
           </div>
           
-          <LeftArrow
-            previousView={this.previousView}
-          />
-          <RightArrow
-            nextView={this.nextView}
-          />
+          <div className="as-positionedSimilarRightArrow">
+            <RightArrow nextView={this.nextView} />
+          </div>
+
         </div>
       )
     }

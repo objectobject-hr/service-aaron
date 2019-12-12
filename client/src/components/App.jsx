@@ -54,45 +54,36 @@ class App extends React.Component {
       return <div>loading...</div>
     } else {
       return (
-        <div>
-          <h1 className="as-title" style={{
-            textAlign: 'center',
-            marginTop: '1em',
-            fontFamily: 'Noto Sans, sans-serif',
-            zIndex: -999
-          }}>
+        <div className="as-everythingContainer">
+          <h1 className="as-title">
             Similar Products
           </h1>
 
           <SimilarProducts />
 
-          <h1 className="as-mightAlsoLike" style={{
+          <h2 className="as-mightAlsoLike" style={{
             textAlign: 'center',
-            marginTop: '16em',
+            // marginTop: '5em',
             fontFamily: 'Noto Sans, sans-serif',
+            fontSize: 30,
             zIndex: -999
+            // backgroundColor: "red"
           }}>
             You Might Also Like
-          </h1>
+          </h2>
 
-          <div className="as-secondCarousel" style={{
-              position: 'absolute',
-              marginTop: '0.5em'
-          }}>
-            <YouMightAlsoLike />
-          </div>
+          {/* <div className="as-youMightAlsoLikeDIV"> */}
+          <YouMightAlsoLike />
+          {/* </div> */}
 
-          <div className="as-showAllHistory" style={{
-              position: 'relative',
-              marginTop: '29em'
-          }}>
+          <div className="as-showAllHistory">
             <ShowAllHistory />
           </div>
           
           <div className="as-footer" style={{
-              position: 'absolute',
-              margin: '-7px',
-              top: '75.5em',
+              // position: 'absolute',
+              // margin: '-7px',
+              // top: '75.5em',
               height: '600px',
               width: '100%',
               backgroundColor: '#0058a3'
