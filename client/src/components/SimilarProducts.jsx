@@ -7,23 +7,6 @@ import RightArrow from './RightArrow.jsx';
 import LeftArrow from './LeftArrow.jsx';
 import testData from '../data/testData.js'
 
-let StyledActive = styled.div`
-  padding-left: 100px;
-  padding-right: 100px;
-`;
-
-const StyledCarousel = styled.div`
-
-`;
-
-const StyledOverflow = styled.div`
-  position: absolute;
-  height: 400px;
-  width: 865px;
-  overflow: hidden;
-  left: 13rem;
-`;
-
 class SimilarProducts extends React.Component {
   constructor(props) {
     super(props);
@@ -101,17 +84,17 @@ class SimilarProducts extends React.Component {
     } else {
       return (
         <div>
-          <StyledOverflow>
+          <div className="as-styledSimilarProductsOverflow">
 
-            <StyledCarousel className="StyledCarousel"
+            <div className="as-styledSimilarProductsCarousel"
               style={{
                 transform: `translateX(${this.state.translateValue}px)`,
                 transition: 'transform ease-out 0.45s'
               }}>
               <ProductList allProducts={this.state.allProducts} />
-            </StyledCarousel>
+            </div>
 
-          </StyledOverflow>
+          </div>
           
           <LeftArrow
             previousView={this.previousView}

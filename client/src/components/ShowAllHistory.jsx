@@ -3,30 +3,6 @@ import styled from 'styled-components';
 import axios from 'axios';
 import ShowAllHistoryEntry from './ShowAllHistoryEntry.jsx';
 
-const StyledHistory = styled.div`
-  position: absolute;
-  display: flex;
-  height: 100px;
-  width: 800px;
-  left: 1rem;
-  cursor: pointer;  
-`;
-
-const StyledShowHistory = styled.div`
-  position: absolute;
-  top: 2rem;
-  left: 66rem;
-  font-family: 'Noto Sans', sans-serif;
-  color: #0058a3;
-  font-weight: 900;
-  z-index: 10;
-  cursor: pointer;
-  &:hover {
-      text-decoration: underline;
-      color: #2196f3;
-  }
-`;
-
 class ShowAllHistory extends React.Component {
   constructor(props) {
     super(props);
@@ -69,12 +45,12 @@ class ShowAllHistory extends React.Component {
   render() {
     return (
       <div>
-        <StyledHistory>
+        <div className="as-styledHistory">
           {this.state.latestHistory.map((item, index) => (
             <ShowAllHistoryEntry product={item} key={index} />
           ))}
-        </StyledHistory>
-        <StyledShowHistory>Show all history</StyledShowHistory>
+        </div>
+        <div className="as-styledShowHistory">Show all history</div>
       </div>
     )
   }

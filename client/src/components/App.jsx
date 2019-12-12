@@ -17,37 +17,8 @@ const Page = styled.div`
   flex-direction: column;
 `;
 
-const Title = styled.h1`
-  text-align: center;
-  margin-top: 1em;
-  font-family: 'Noto Sans', sans-serif;
-  z-index: -999;
-`;
-
-const Title2 = styled.h1`
-  text-align: center;
-  margin-top: 16em;
-  font-family: 'Noto Sans', sans-serif;
-  z-index: -999;
-`;
-
-const SecondCarousel = styled.div`
-  position: absolute;
-  margin-top: 0.5em;
-`;
-
-const History = styled.div`
-  position: relative;
-  margin-top: 29em;
-`;
-
 const StyledFooter = styled.div`
-  position: absolute;
-  margin: -7px;
-  top: 75.5em;
-  height: 600px;
-  width: 100%;
-  background-color: #0058a3;
+
 `;
 
 class App extends React.Component {
@@ -84,28 +55,50 @@ class App extends React.Component {
     } else {
       return (
         <div>
-          <Title>
+          <h1 className="as-title" style={{
+            textAlign: 'center',
+            marginTop: '1em',
+            fontFamily: 'Noto Sans, sans-serif',
+            zIndex: -999
+          }}>
             Similar Products
-          </Title>
+          </h1>
 
           <SimilarProducts />
 
-          <Title2>
+          <h1 className="as-mightAlsoLike" style={{
+            textAlign: 'center',
+            marginTop: '16em',
+            fontFamily: 'Noto Sans, sans-serif',
+            zIndex: -999
+          }}>
             You Might Also Like
-          </Title2>
+          </h1>
 
-          <SecondCarousel>
+          <div className="as-secondCarousel" style={{
+              position: 'absolute',
+              marginTop: '0.5em'
+          }}>
             <YouMightAlsoLike />
+          </div>
 
-          </SecondCarousel>
-
-          <History>
+          <div className="as-showAllHistory" style={{
+              position: 'relative',
+              marginTop: '29em'
+          }}>
             <ShowAllHistory />
-          </History>
+          </div>
           
-          <StyledFooter>
+          <div className="as-footer" style={{
+              position: 'absolute',
+              margin: '-7px',
+              top: '75.5em',
+              height: '600px',
+              width: '100%',
+              backgroundColor: '#0058a3'
+          }}>
             <Footer></Footer>
-          </StyledFooter>
+          </div>
         </div>
       );
 

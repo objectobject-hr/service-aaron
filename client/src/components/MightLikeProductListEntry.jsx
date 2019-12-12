@@ -4,45 +4,6 @@ import FullStar from './FullStar.jsx';
 import HalfStar from './HalfStar.jsx';
 import EmptyStar from './EmptyStar.jsx';
 
-const StyledLikeItem = styled.div`
-  padding: 20px;
-  transition: transform .2s; /* Animation */
-  margin: 0 auto;
-  cursor: pointer;
-  &:hover {
-    .productimage {
-      transform: scale(1.06);
-    }
-  }
-  &:hover {
-    .productname {
-      text-decoration: underline;
-    }
-  }
-`;
-
-const StyledLikeName = styled.div`
-  font-family: 'Noto Sans', sans-serif;
-  font-weight: 550;
-`;
-
-const StyledLikeDescription = styled.div`
-  font-family: 'Noto Sans', sans-serif;
-  font-size: 14px;
-`;
-
-const StyledLikePrice = styled.div`
-  font-family: 'Noto Sans', sans-serif;
-  font-size: 26px;
-  font-weight: 700;
-`;
-
-const Span = styled.span`
-  display: flex;
-  font-family: 'Noto Sans', sans-serif;
-  font-size: 15px;
-`;
-
 const round = (x, precision) => {
   var y = +x + (precision === undefined ? 0.5 : precision/2);
   return y - (y % (precision === undefined ? 1 : +precision));
@@ -73,14 +34,19 @@ const ratingHandler = (unroundedRate) => {
 const MightLikeProductListEntry = (props) => {
   // console.log(props.MightLikeProduct.itemimage)
   return (
-    <StyledLikeItem >
-      <img src={props.MightLikeProduct.itemimage} className="productimage" height="175" width="175"/>
-      <StyledLikeName className="productname">{props.MightLikeProduct.itemname}</StyledLikeName>
-      <StyledLikeDescription>{props.MightLikeProduct.description}</StyledLikeDescription>
-      <StyledLikeDescription>{props.MightLikeProduct.typesize}</StyledLikeDescription>
-      <StyledLikePrice>${props.MightLikeProduct.price}</StyledLikePrice>
-      <Span>{ratingHandler(props.MightLikeProduct.rating)} &nbsp; {props.MightLikeProduct.rating} &nbsp; ({props.MightLikeProduct.numberRatings}) </Span>
-    </StyledLikeItem>
+    <div className="as-styledLikeItem" style={{
+      padding: "20px",
+      transition: "transform .2s", /* Animation */
+      margin: "0 auto",
+      cursor: "pointer"
+    }}>
+      <img src={props.MightLikeProduct.itemimage} className="as-productImage" height="175" width="175"/>
+      <div className="as-productName">{props.MightLikeProduct.itemname}</div>
+      <div className="as-description">{props.MightLikeProduct.description}</div>
+      <div className="as-description">{props.MightLikeProduct.typesize}</div>
+      <div className="as-price">${props.MightLikeProduct.price}</div>
+      <span className="as-starRatings">{ratingHandler(props.MightLikeProduct.rating)} &nbsp; {props.MightLikeProduct.rating} &nbsp; ({props.MightLikeProduct.numberRatings}) </span>
+    </div>
   )
 }
 

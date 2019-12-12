@@ -6,19 +6,6 @@ import YouLikeRightArrow from './YouLikeRightArrow.jsx';
 import YouLikeLeftArrow from './YouLikeLeftArrow.jsx';
 import testData from '../data/testData.js'
 
-const StyledCarousel2 = styled.div`
-  position: absolute;
-  top: 1rem;
-`;
-
-const StyledOverflow2 = styled.div`
-  position: absolute;
-  height: 550px;
-  width: 865px;
-  left: 13rem;
-  overflow: hidden;
-`;
-
 class YouMightAlsoLike extends React.Component {
   constructor(props) {
     super(props);
@@ -109,17 +96,17 @@ class YouMightAlsoLike extends React.Component {
     } else {
       return (
         <div>
-          <StyledOverflow2>
+          <div className="as-styledYouMightAlsoLikeOverflow">
 
-            <StyledCarousel2 className="StyledCarousel2"
+            <div className="StyledCarousel2"
               style={{
                 transform: `translateX(${this.state.translateValue}px)`,
                 transition: 'transform ease-out 0.45s'
               }}>
               <MightLikeProductList allLikedProducts={this.state.allLikedProducts} />
-            </StyledCarousel2>
+            </div>
 
-          </StyledOverflow2>
+          </div>
           
           <YouLikeLeftArrow
             previousYouLikeView={this.previousYouLikeView}

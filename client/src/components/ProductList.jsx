@@ -2,12 +2,6 @@ import React from 'react';
 import ProductListEntry from './ProductListEntry.jsx';
 import styled from 'styled-components';
 
-
-let StyledProducts = styled.div`
-  display: flex;
-  margin: 0 px;
-`;
-
 const ProductList = (props) => {
   // console.log(typeof props.allProducts)
   // console.log(props.allProducts)
@@ -18,11 +12,11 @@ const ProductList = (props) => {
   } else {
     return (
 
-      <StyledProducts>
+      <div className="as-styledProductList">
         {props.allProducts.map((item, index) => (
           <ProductListEntry product={item} key={index} index={index} />
         ))}
-      </StyledProducts>
+      </div>
   
     )
 

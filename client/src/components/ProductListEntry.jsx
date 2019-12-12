@@ -4,45 +4,6 @@ import FullStar from './FullStar.jsx';
 import HalfStar from './HalfStar.jsx';
 import EmptyStar from './EmptyStar.jsx';
 
-const StyledItem = styled.div`
-  padding: 20px;
-  transition: transform .2s; /* Animation */
-  margin: 0 auto;
-  cursor: pointer;
-  &:hover {
-    .productimage {
-      transform: scale(1.06);
-    }
-  }
-  &:hover {
-    .productname {
-      text-decoration: underline;
-    }
-  }
-`;
-
-const StyledProductName = styled.div`
-  font-family: 'Noto Sans', sans-serif;
-  font-weight: 550;
-`;
-
-const StyledDescription = styled.div`
-  font-family: 'Noto Sans', sans-serif;
-  font-size: 14px;
-`;
-
-const StyledPrice = styled.div`
-  font-family: 'Noto Sans', sans-serif;
-  font-size: 26px;
-  font-weight: 700;
-`;
-
-const Span = styled.span`
-  display: flex;
-  font-family: 'Noto Sans', sans-serif;
-  font-size: 15px;
-`;
-
 const round = (x, precision) => {
   var y = +x + (precision === undefined ? 0.5 : precision/2);
   return y - (y % (precision === undefined ? 1 : +precision));
@@ -73,14 +34,14 @@ const ratingHandler = (unroundedRate) => {
 const ProductListEntry = (props) => {
   // console.log(props.product.itemimage)
   return (
-      <StyledItem>
-        <img src={props.product.itemimage} className="productimage" height="175" width="175"/>
-        <StyledProductName className="productname">{props.product.itemname}</StyledProductName>
-        <StyledDescription>{props.product.description}</StyledDescription>
-        <StyledDescription>{props.product.typesize}</StyledDescription>
-        <StyledPrice>${props.product.price}</StyledPrice>
-        <Span>{ratingHandler(props.product.rating)} &nbsp; {props.product.rating} &nbsp; ({props.product.numberRatings})</Span>
-      </StyledItem>
+      <div className="as-styledItem">
+        <img src={props.product.itemimage} className="as-productImage" height="175" width="175"/>
+        <div className="as-productName">{props.product.itemname}</div>
+        <div className="as-description">{props.product.description}</div>
+        <div className="as-description">{props.product.typesize}</div>
+        <div className="as-price">${props.product.price}</div>
+        <span className="as-starRatings">{ratingHandler(props.product.rating)} &nbsp; {props.product.rating} &nbsp; ({props.product.numberRatings})</span>
+      </div>
   )
 }
 

@@ -1,3 +1,399 @@
 /* html, body {
   overflow-x: hidden;
 } */
+
+.as-title {
+    text-align: center;
+    margin-top: 1em;
+    font-family: 'Noto Sans', sans-serif;
+    z-index: -999;
+}
+
+.as-styledSimilarProductsOverflow {
+  position: absolute;
+  height: 400px;
+  width: 865px;
+  overflow: hidden;
+  left: 13rem;
+}
+
+.as-styledYouMightAlsoLikeOverflow {
+  position: absolute;
+  height: 550px;
+  width: 865px;
+  left: 13rem;
+  overflow: hidden;
+}
+
+.as-styledProductList {
+  display: flex;
+  margin: 0px;
+}
+
+.as-styledItem {
+  padding: 20px;
+  transition: transform .2s; /* Animation */
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.as-styledItem:hover .as-productImage {
+  transform: scale(1.06);
+}
+
+.as-styledItem:hover .as-productName {
+  text-decoration: underline;
+}
+
+.as-styledLikeItem:hover .as-productImage {
+  transform: scale(1.06);
+}
+
+.as-styledLikeItem:hover .as-productName {
+  text-decoration: underline;
+}
+
+.as-productName {
+  font-family: 'Noto Sans', 'sans-serif';
+  font-weight: 550;
+}
+
+.as-description {
+  font-family: 'Noto Sans', 'sans-serif';
+  font-size: 14px;
+}
+
+.as-price {
+  font-family: 'Noto Sans', 'sans-serif';
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.as-starRatings {
+  display: flex;
+  font-family: 'Noto Sans', 'sans-serif';
+  font-size: 15px;
+}
+
+.as-starSize {
+  height: 20px;
+  width: 20px;
+}
+
+.as-similarProductLeftArrow {
+  position: absolute;
+  top: 15rem;
+  left: 10rem;
+  z-index: 99;
+  cursor: pointer;
+  height: 60px;
+  width: 60px;
+}
+
+.as-similarProductLeftArrowSVG {
+  position: absolute;
+  top: 1.15rem;
+  left: 1.15rem;
+  height: 30px;
+  width: 30px;
+}
+
+.as-similarProductLeftCircle {
+  position: absolute;
+  height: 60px;
+  width: 60px;
+  top: -1rem;
+  left: 0rem;
+  border-radius: 200%;
+}
+
+.as-similarProductLeftCircle:hover {
+  background-color: #bbb;
+}
+
+.as-similarProductRightArrow {
+  position: absolute;
+  top: 15rem;
+  right: 11rem;
+  z-index: 99;
+  cursor: pointer;
+  height: 30px;
+  width: 30px;
+}
+
+.as-similarProductRightArrowSVG {
+  position: absolute;
+  top: 1.15rem;
+  left: 1.15rem;
+  height: 30px;
+  width: 30px;
+}
+
+.as-similarProductRightCircle {
+  position: absolute;
+  height: 60px;
+  width: 60px;
+  top: -1rem;
+  left: 0rem;
+  border-radius: 200%;
+}
+
+.as-similarProductRightCircle:hover {
+  background-color: #bbb;
+}
+
+.as-youMightLikeLeftArrow {
+  position: absolute;
+  top: 10rem;
+  left: 10rem;
+  z-index: 99;
+  cursor: pointer;
+  height: 60px;
+  width: 60px;
+  border-radius: 200%;
+}
+
+.as-youMightLikeLeftArrowSVG {
+  position: absolute;
+  top: 1.15rem;
+  left: 1.15rem;
+  height: 30px;
+  width: 30px;
+}
+
+.as-youMightLikeLeftCircle {
+  position: absolute;
+  height: 60px;
+  width: 60px;
+  top: -1rem;
+  left: 0rem;
+  border-radius: 200%;
+}
+
+.as-youMightLikeLeftCircle:hover {
+  background-color: #bbb;
+}
+
+.as-youMightLikeRightArrow {
+  position: absolute;
+  top: 10rem;
+  left: 67rem;
+  z-index: 99;
+  cursor: pointer;
+  height: 30px;
+  width: 30px;
+}
+
+.as-youMightLikeRightArrowSVG {
+  position: absolute;
+  top: 1.15rem;
+  left: 1.15rem;
+  height: 30px;
+  width: 30px;
+}
+
+.as-youMightLikeRightCircle {
+  position: absolute;
+  height: 60px;
+  width: 60px;
+  top: -1rem;
+  left: 0rem;
+  border-radius: 200%;
+}
+
+.as-youMightLikeRightCircle:hover {
+  background-color: #bbb;
+}
+
+.as-styledHistory {
+  position: absolute;
+  display: flex;
+  height: 100px;
+  width: 800px;
+  left: 1rem;
+  cursor: pointer;  
+}
+
+.as-styledShowHistory {
+  position: absolute;
+  top: 2rem;
+  left: 66rem;
+  font-family: 'Noto Sans', sans-serif;
+  color: #0058a3;
+  font-weight: 900;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.as-styledShowHistory:hover {
+  text-decoration: underline;
+  color: #2196f3;
+}
+
+.as-styledHistoryEntry {
+  padding: 15px;
+  transition: transform .2s; /* Animation */
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.as-styledHistoryEntry:hover .as-styledHistoryProductImage {
+  transform: scale(1.06);
+}
+
+.as-styledHelpIcon {
+  height: 2.25rem;
+  width: 2.25rem;
+  stroke-width: 0.5;
+  fill: white;
+  stroke: none;
+
+  position: absolute;
+  top: 100px;
+  left: 60px;
+}
+
+.as-styledHelp {
+  position: absolute;
+  top: 105px;
+  left: 105px;
+  font-family: 'Noto Sans', sans-serif;
+  color: white;
+  font-weight: 700;
+}
+
+.as-styledHelpList {
+  position: absolute;
+  top: 150px;
+  left: 60px;
+}
+
+.as-styledHelpListEntry {
+  font-family: 'Noto Sans', sans-serif;
+  color: white;
+  line-height: 200%;
+}
+
+.as-styledHelpListEntry:hover {
+  text-decoration: underline;
+}
+
+.as-styledShopIcon {
+  height: 2.25rem;
+  width: 2.25rem;
+  stroke-width: 0.5;
+  fill: white;
+  stroke: none;
+  
+  position: absolute;
+  top: 100px;
+  left: 375px;
+}
+
+.as-styledShop {
+  position: absolute;
+  top: 105px;
+  left: 420px;
+  font-family: 'Noto Sans', sans-serif;
+  color: white;
+  font-weight: 700;
+}
+
+.as-styledShopList {
+  position: absolute;
+  top: 150px;
+  left: 375px;
+  font-family: 'Noto Sans', sans-serif;
+  color: white;
+  line-height: 200%;
+}
+
+.as-styledShopListEntry {
+  font-family: 'Noto Sans', sans-serif;
+  color: white;
+  line-height: 200%;
+}
+
+.as-styledShopListEntry:hover {
+  text-decoration: underline;
+}
+
+.as-styledAboutIcon {
+  height: 2.25rem;
+  width: 2.25rem;
+  stroke-width: 0.5;
+  fill: white;
+  stroke: none;
+  
+  position: absolute;
+  top: 100px;
+  left: 700px;
+}
+
+.as-styledAbout {
+  position: absolute;
+  top: 105px;
+  left: 750px;
+  font-family: 'Noto Sans', sans-serif;
+  color: white;
+  font-weight: 700;
+}
+
+.as-styledAboutList {
+  position: absolute;
+  top: 150px;
+  left: 700px;
+  font-family: 'Noto Sans', sans-serif;
+  color: white;
+  line-height: 200%;
+}
+
+.as-styledAboutListEntry {
+  font-family: 'Noto Sans', sans-serif;
+  color: white;
+  line-height: 200%;
+}
+
+.as-styledAboutListEntry:hover {
+  text-decoration: underline;
+}
+
+.as-styledInfoIcon {
+  height: 2.25rem;
+  width: 2.25rem;
+  stroke-width: 0.5;
+  fill: white;
+  stroke: none;
+  
+  position: absolute;
+  top: 100px;
+  left: 980px;
+}
+
+.as-styledInfo {
+  position: absolute;
+  top: 105px;
+  left: 1025px;
+  font-family: 'Noto Sans', sans-serif;
+  color: white;
+  font-weight: 700;
+}
+
+.as-styledInfoList {
+  position: absolute;
+  top: 150px;
+  left: 980px;
+  font-family: 'Noto Sans', sans-serif;
+  color: white;
+  line-height: 200%;
+}
+
+.as-styledInfoListEntry {
+  font-family: 'Noto Sans', sans-serif;
+  color: white;
+  line-height: 200%;
+}
+
+.as-styledInfoListEntry:hover {
+  text-decoration: underline;
+}
