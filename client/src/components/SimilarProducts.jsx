@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+// import styled from 'styled-components';
 import ProductList from './ProductList.jsx';
 import axios from 'axios';
 import data from '../data/data.js';
@@ -55,8 +55,8 @@ class SimilarProducts extends React.Component {
   }
 
   nextView() {
-    console.log(`clicked`)
-    console.log(this.state.currentIndex)
+    // console.log(`clicked`)
+    // console.log(this.state.currentIndex)
     if(this.state.currentIndex > this.state.allProducts.length - 13) {
     // if(this.state.currentIndex === 1) {
       return this.setState({
@@ -78,7 +78,7 @@ class SimilarProducts extends React.Component {
 
 
   render() {
-    console.log(this.state.allProducts)
+    // console.log(this.state.allProducts)
     if (this.state.allProducts.length < 1 || this.state.allProducts === undefined) {
       return <div>loading...</div>
     } else {

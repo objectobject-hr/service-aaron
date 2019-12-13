@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+// import styled from 'styled-components';
 import MightLikeProductList from './MightLikeProductList.jsx';
 import axios from 'axios';
 import YouLikeRightArrow from './YouLikeRightArrow.jsx';
@@ -90,7 +90,7 @@ class YouMightAlsoLike extends React.Component {
 
 
   render() {
-    console.log(this.state.allLikedProducts)
+    // console.log(this.state.allLikedProducts)
     if (this.state.allLikedProducts.length < 1 || this.state.allLikedProducts === undefined) {
       return <div>loading...</div>
     } else {

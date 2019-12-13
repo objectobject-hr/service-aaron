@@ -1,11 +1,11 @@
 import React from 'react';
 import MightLikeProductListEntry from './MightLikeProductListEntry.jsx';
-import styled from 'styled-components';
+// import styled from 'styled-components';
 
 const MightLikeProductList = (props) => {
   // console.log(typeof props.allLikedProducts)
   // console.log(props.allLikedProducts)
-  console.log(props.allLikedProducts[0])
+  // console.log(props.allLikedProducts[0])
 
   if (props.allLikedProducts[0] === undefined) {
     return null
@@ -14,7 +14,7 @@ const MightLikeProductList = (props) => {
       
       <div className="as-styledProductList">
         {props.allLikedProducts.map((item, index) => (
-          <MightLikeProductListEntry MightLikeProduct={item} key={index} index={index} />
+          <MightLikeProductListEntry MightLikeProduct={item} key={`MightLikeProductList-${index}`} index={index} />
         ))}
       </div>
   

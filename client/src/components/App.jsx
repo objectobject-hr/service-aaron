@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+// import styled from 'styled-components';
 import axios from 'axios';
 import SimilarProducts from './SimilarProducts.jsx';
 import YouMightAlsoLike from './YouMightAlsoLike.jsx';
@@ -7,19 +7,6 @@ import testData from '../data/testData.js';
 import data from '../data/data.js'
 import ShowAllHistory from '../components/ShowAllHistory.jsx';
 import Footer from './Footer.jsx';
-
-
-const Page = styled.div`
-  width: 80%;
-  margin-left: auto;
-  margin-right: auto;
-  display: flex;
-  flex-direction: column;
-`;
-
-const StyledFooter = styled.div`
-
-`;
 
 class App extends React.Component {
   constructor(props) {
@@ -34,7 +21,7 @@ class App extends React.Component {
 
   getAll() {
     axios.get('/products')
-      .then((response) => console.log(response.data))
+      // .then((response) => console.log(response.data))
       // .then((response) => {
       //   this.setState({
       //     allProducts: response.data,
@@ -45,11 +32,11 @@ class App extends React.Component {
 
   componentDidMount() {
     // this.getAll();
-    console.log(`actual allProducts: `, this.state.allProducts)
+    // console.log(`actual allProducts: `, this.state.allProducts)
   }
 
   render() {
-    console.log(this.state.allProducts)
+    // console.log(this.state.allProducts)
     if (this.state.allProducts.length < 1 || this.state.allProducts === undefined) {
       return <div>loading...</div>
     } else {
@@ -61,11 +48,12 @@ class App extends React.Component {
 
           <SimilarProducts />
 
-          <h2 className="as-mightAlsoLike" style={{
+          <h2 className="as-title" style={{
             textAlign: 'center',
             // marginTop: '5em',
             fontFamily: 'Noto Sans, sans-serif',
             fontSize: 30,
+            fontWeight: 700,
             zIndex: -999
             // backgroundColor: "red"
           }}>

@@ -11,6 +11,7 @@
   /* margin-top: 1em; */
   font-family: 'Noto Sans', sans-serif;
   font-size: 30;
+  font-weight: 700;
   z-index: -999;
 }
 
@@ -250,6 +251,7 @@
 .as-showAllHistory {
   display: flex;
   flex-direction: row;
+  justify-content: center;
   height: 100;
   /* background-color: pink; */
 }
@@ -259,7 +261,7 @@
   display: flex;
   height: 100px;
   /* width: 800px; */
-  margin-left: 20px;
+  /* margin-left: 20px; */
   cursor: pointer;  
 }
 

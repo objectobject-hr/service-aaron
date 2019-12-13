@@ -1,6 +1,6 @@
 import React from 'react';
 import ProductListEntry from './ProductListEntry.jsx';
-import styled from 'styled-components';
+// import styled from 'styled-components';
 
 const ProductList = (props) => {
   // console.log(typeof props.allProducts)
@@ -14,7 +14,7 @@ const ProductList = (props) => {
 
       <div className="as-styledProductList">
         {props.allProducts.map((item, index) => (
-          <ProductListEntry product={item} key={index} index={index} />
+          <ProductListEntry product={item} key={`ProductList-${index}`} index={index} />
         ))}
       </div>
   

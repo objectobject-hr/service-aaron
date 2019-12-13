@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+// import styled from 'styled-components';
 import FullStar from './FullStar.jsx';
 import HalfStar from './HalfStar.jsx';
 import EmptyStar from './EmptyStar.jsx';
