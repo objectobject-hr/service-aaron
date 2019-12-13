@@ -40,6 +40,7 @@ class SimilarProducts extends React.Component {
 
   previousView() {
     console.log(`clicked`)
+    console.log(this.state.currentIndex)
     // if(this.state.currentIndex === this.state.allProducts.length - 1) {
     if(this.state.currentIndex === 0) {
       return this.setState({
@@ -50,14 +51,15 @@ class SimilarProducts extends React.Component {
     
     this.setState(prevState => ({
       currentIndex: prevState.currentIndex - 1,
-      translateValue: prevState.translateValue - -(this.slideWidth())
+      // translateValue: prevState.translateValue - -(this.slideWidth())
+      translateValue: prevState.translateValue + 860
     }));
   }
 
   nextView() {
-    // console.log(`clicked`)
-    // console.log(this.state.currentIndex)
-    if(this.state.currentIndex > this.state.allProducts.length - 13) {
+    console.log(`clicked`)
+    console.log(this.state.currentIndex)
+    if(this.state.currentIndex > 1) {
     // if(this.state.currentIndex === 1) {
       return this.setState({
         currentIndex: 0,
@@ -67,7 +69,8 @@ class SimilarProducts extends React.Component {
     
     this.setState(prevState => ({
       currentIndex: prevState.currentIndex + 4,
-      translateValue: prevState.translateValue + -(this.slideWidth())
+      // translateValue: prevState.translateValue + -(this.slideWidth())
+      translateValue: prevState.translateValue - 860
     }));
 
   }

@@ -62,14 +62,15 @@ class YouMightAlsoLike extends React.Component {
     
     this.setState(prevYouLikeState => ({
       currentYouLikeIndex: prevYouLikeState.currentYouLikeIndex - 1,
-      translateValue: prevYouLikeState.translateValue - -(this.slideWidth())
+      // translateValue: prevYouLikeState.translateValue - -(this.slideWidth())
+      translateValue: prevYouLikeState.translateValue + 860
     }));
   }
 
   nextYouLikeView() {
     console.log(`clicked`)
     console.log(this.state.currentYouLikeIndex)
-    if(this.state.currentYouLikeIndex > this.state.allLikedProducts.length - 13) {
+    if(this.state.currentYouLikeIndex > 8) {
     // if(this.state.currentYouLikeIndex === 1) {
       return this.setState({
         currentYouLikeIndex: 0,
@@ -79,7 +80,8 @@ class YouMightAlsoLike extends React.Component {
     
     this.setState(prevYouLikeState => ({
       currentYouLikeIndex: prevYouLikeState.currentYouLikeIndex + 4,
-      translateValue: prevYouLikeState.translateValue + -(this.slideWidth())
+      // translateValue: prevYouLikeState.translateValue + -(this.slideWidth())
+      translateValue: prevYouLikeState.translateValue - 860
     }));
 
   }
