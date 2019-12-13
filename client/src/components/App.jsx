@@ -52,7 +52,7 @@ class App extends React.Component {
             textAlign: 'center',
             // marginTop: '5em',
             fontFamily: 'Noto Sans, sans-serif',
-            fontSize: 30,
+            fontSize: '30px',
             fontWeight: 700,
             zIndex: -999
             // backgroundColor: "red"
