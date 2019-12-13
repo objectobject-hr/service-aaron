@@ -37,9 +37,9 @@
 
 .as-styledSimilarProductsOverflow {
   /* position: absolute; */
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+  /* display: flex; */
+  /* flex-direction: row; */
+  /* justify-content: center; */
   height: 400px;
   width: 865px;
   overflow: hidden;
@@ -64,7 +64,7 @@
 
 .as-styledProductList {
   display: flex;
-  margin: 0px;
+  /* margin-left: 200px; */
 }
 
 .as-styledItem {
