@@ -42,13 +42,13 @@ class App extends React.Component {
     } else {
       return (
         <div className="as-everythingContainer">
-          <h1 className="as-title">
+          <div className="as-title">
             Similar Products
-          </h1>
+          </div>
 
           <SimilarProducts />
 
-          <h2 className="as-title" style={{
+          <div className="as-title" style={{
             textAlign: 'center',
             // marginTop: '5em',
             fontFamily: 'Noto Sans, sans-serif',
@@ -58,7 +58,7 @@ class App extends React.Component {
             // backgroundColor: "red"
           }}>
             You Might Also Like
-          </h2>
+          </div>
 
           {/* <div className="as-youMightAlsoLikeDIV"> */}
           <YouMightAlsoLike />
