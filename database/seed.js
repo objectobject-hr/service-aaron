@@ -41,13 +41,13 @@ const productname = [
   "GAMLEBY",
   "TORSBY",
   "KEJSARKRONA",
-  "YPPERLIG ARM CHAIR",
+  "YPPERLIGGY",
   "BEKANT",
   "LISABO",
-  "YPPERLIG BENCH",
+  "BENCH",
   "NILSOVE",
-  "YPPERLIG STOOL",
-  "EKEDALEN BAR TABLE",
+  "YPPERLIG",
+  "EKEDALENA",
   "MOCKLEBY"
 ];
 const adj = [

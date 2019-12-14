@@ -40,7 +40,6 @@ const save = (data, callback) => {
     }
   });
 };
-// })
 
 const deleteAll = (req, callback) => {
   Product.remove({}, (err, results) => {
