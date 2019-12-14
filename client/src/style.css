@@ -538,6 +538,7 @@
 .as-addToListSVG {
   height: 1.65rem;
   width: 1.65rem;
+  cursor: pointer;
 }
 
 .as-addToBag {
@@ -551,6 +552,7 @@
   height: 1.65rem;
   width: 1.65rem;
   fill: white;
+  cursor: pointer;
 }
 
 .as-modalComponent {
