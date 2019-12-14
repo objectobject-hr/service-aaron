@@ -588,6 +588,7 @@
   width: 120px;
   padding-top: 8.5px;
   color: #0058a3;
+  cursor: pointer;
 }
 
 .as-modalLink:hover {
