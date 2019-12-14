@@ -65,6 +65,23 @@
   color: white;
 }
 
+.as-modal {
+  position: fixed;
+  bottom: 20px;
+  right: 200px;
+}
+
+.as-hoverModal {
+  position: fixed;
+  height: 98px;
+  width: 450px;
+  bottom: 20px;
+  right: 20%;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+}
+
 .as-SVG {
   height: 2.25rem;
   width: 2.25rem;
@@ -285,7 +302,7 @@
   color: #0058a3;
   /* color: red; */
   font-weight: 900;
-  z-index: 10;
+  z-index: 0;
   cursor: pointer;
 }
 
@@ -508,4 +525,79 @@
 
 .as-styledInfoListEntry:hover {
   text-decoration: underline;
+}
+
+.as-addToList {
+  height: 50px;
+  width: 85px;
+  padding-right: 7.5px;
+  padding-left: 10px;
+}
+
+.as-addToListSVG {
+  height: 1.65rem;
+  width: 1.65rem;
+}
+
+.as-addToBag {
+  height: 50px;
+  width: 85px;
+  padding-left: 7.5px;
+}
+
+.as-addToBagSVG {
+  height: 1.65rem;
+  width: 1.65rem;
+  fill: white;
+}
+
+.as-modalComponent {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 5;
+  max-width: 500;
+  min-height: 300;
+  margin: 0 auto;
+  padding: 30;
+}
+
+.as-modalFooter {
+  height: 98px;
+  width: 400px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.as-modalText {
+  font-size: 14px;
+  font-weight: 700;
+  height: 25px;
+  width: 120px;
+  padding-top: 7.5px;
+  padding-bottom: 2.5px;
+}
+
+.as-modalLink {
+  font-size: 16px;
+  height: 25px;
+  width: 120px;
+  padding-top: 8.5px;
+  color: #0058a3;
+}
+
+.as-modalLink:hover {
+  text-decoration: underline;
+  color: #2196f3;
+}
+
+.as-modalImage {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 20px;
+  padding-left: 10px;
 }

@@ -14,33 +14,49 @@ class App extends React.Component {
     super(props);
 
     this.state = {
-      allProducts: testData.products,
-      shownProducts: []
+      onLoadProducts: [],
+      shownProducts: [],
+      modalState: true
     };
+
+    this.getAll = this.getAll.bind(this);
+    this.toggleModal = this.toggleModal.bind(this);
   }
+
+  toggleModal() {
+    this.setState({
+      modalState: !this.state.modalState
+    });
+  }
+
+  // onClose(e) {
+  //   this.setState({
+  //     modalState: false
+  //   });
+  // }
 
   getAll() {
     axios
       .get("/products")
       // .then((response) => console.log(response.data))
-      // .then((response) => {
-      //   this.setState({
-      //     allProducts: response.data,
-      //   })
-      // })
+      .then(response => {
+        this.setState({
+          onLoadProducts: response.data
+        });
+      })
       .catch(err => console.error(err));
   }
 
   componentDidMount() {
-    // this.getAll();
-    // console.log(`actual allProducts: `, this.state.allProducts)
+    this.getAll();
+    // console.log(`actual onLoadProducts: `, this.state.onLoadProducts)
   }
 
   render() {
-    // console.log(this.state.allProducts)
+    // console.log(this.state.onLoadProducts)
     if (
-      this.state.allProducts.length < 1 ||
-      this.state.allProducts === undefined
+      this.state.onLoadProducts.length < 1 ||
+      this.state.onLoadProducts === undefined
     ) {
       return <div>loading...</div>;
     } else {
@@ -87,7 +103,16 @@ class App extends React.Component {
             <Footer></Footer>
           </div>
 
-          {/* <Modal /> */}
+          <div className="as-modal">
+            {/* <button onClick={this.toggleModal}> Open modal </button> */}
+            <div className="as-hoverModal">
+              <Modal
+                show={this.state.modalState}
+                // onClose={this.toggleModal}
+                product={this.state.onLoadProducts[0]}
+              ></Modal>
+            </div>
+          </div>
         </div>
       );
     }
