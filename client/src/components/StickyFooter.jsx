@@ -23,8 +23,8 @@ class StickyFooter extends React.Component {
     this.setState(
       {
         addList: !this.state.addList
-      },
-      () => console.log(this.state.addList)
+      }
+      // () => console.log(this.state.addList)
     );
   }
 
@@ -33,8 +33,8 @@ class StickyFooter extends React.Component {
     this.setState(
       {
         addBag: !this.state.addBag
-      },
-      () => console.log(this.state.addBag)
+      }
+      // () => console.log(this.state.addBag)
     );
   }
 

@@ -212,9 +212,8 @@ const seedDatabase = products => {
   db.save(products, (err, results) => {
     if (err) {
       console.error(err);
-    } else {
-      mongoose.connection.close();
     }
+    mongoose.connection.close();
   });
 };
 
