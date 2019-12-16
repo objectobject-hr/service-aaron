@@ -1,8 +1,8 @@
 import React from "react";
-import MightLikeProductListEntry from "./MightLikeProductListEntry.jsx";
+import AddBagModalListEntry from "./AddBagModalListEntry";
 // import styled from 'styled-components';
 
-const MightLikeProductList = props => {
+const AddBagModalList = props => {
   // console.log(typeof props.allLikedProducts)
   // console.log(props.allLikedProducts)
   // console.log(props.allLikedProducts[0])
@@ -13,9 +13,9 @@ const MightLikeProductList = props => {
     return (
       <div className="as-styledProductList">
         {props.allLikedProducts.map((item, index) => (
-          <MightLikeProductListEntry
+          <AddBagModalListEntry
             MightLikeProduct={item}
-            key={`MightLikeProductList-${index}`}
+            key={`AddBagModalListEntry-${index}`}
             index={index}
           />
         ))}
@@ -24,4 +24,4 @@ const MightLikeProductList = props => {
   }
 };
 
-export default MightLikeProductList;
+export default AddBagModalList;

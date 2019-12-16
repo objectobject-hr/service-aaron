@@ -3,7 +3,6 @@ import ProductListEntry from "./ProductListEntry.jsx";
 // import styled from 'styled-components';
 
 const ProductList = props => {
-  // console.log(typeof props.allProducts)
   // console.log(props.allProducts)
   // console.log(props.allProducts[0])
 

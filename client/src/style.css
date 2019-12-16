@@ -22,6 +22,7 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  border-bottom: 1px solid #ccc;
   /* height: 400px; */
   /* width: 100%; */
   /* background-color: yellow; */
@@ -535,6 +536,27 @@
   cursor: pointer;
 }
 
+.as-addToListButton {
+  height: 50px;
+  width: 80px;
+  background-color: "#ffffff";
+  border: 2p;
+  border-color: #111;
+  cursor: pointer;
+}
+
+.as-addToListButton:hover {
+  background-color: black;
+}
+
+.as-addToListButton:hover .as-addToListSVG {
+  fill: white;
+}
+
+.as-addToListButton:active {
+  opacity: 80%;
+}
+
 .as-addToListSVG {
   height: 1.65rem;
   width: 1.65rem;
@@ -546,6 +568,16 @@
   width: 85px;
   padding-left: 7.5px;
   cursor: pointer;
+}
+
+.as-addToBagButton {
+  height: 50px;
+  width: 80px;
+  background-color: #0058a3;
+}
+
+.as-addToBagButton:hover {
+  background-color: #2196f3;
 }
 
 .as-addToBagSVG {
@@ -584,6 +616,7 @@
   width: 120px;
   padding-top: 7.5px;
   padding-bottom: 2.5px;
+  padding-right: 6px;
 }
 
 .as-modalLink {
@@ -593,6 +626,7 @@
   padding-top: 8.5px;
   color: #0058a3;
   cursor: pointer;
+  padding-right: 6px;
 }
 
 .as-modalLink:hover {
@@ -607,3 +641,288 @@
   padding-left: 10px;
   cursor: pointer;
 }
+
+.as-backdrop {
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 50px;
+  font-family: "Noto Sans", sans-serif;
+}
+
+.as-modalStyle {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-self: center;
+  width: 80rem;
+  box-sizing: border-box;
+  transform: translate(-50%, -3rem);
+  border-radius: 5px;
+  /* -webkit-box-orient: vertical;
+  -webkit-box-direction: normal; */
+  flex-direction: column;
+  background-color: #fff;
+  transition: all 400ms ease;
+  padding: 0;
+  margin: 0 auto;
+  left: 50%;
+  bottom: 0;
+  position: absolute;
+  flex: 0 0 66.66667%;
+  max-height: 70%;
+  max-width: 66.66667%;
+}
+
+.as-mainDiv {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  max-height: calc(100vh - 11rem);
+  -webkit-box-flex: 1;
+  flex-grow: 1;
+  -webkit-box-align: center;
+  align-items: center;
+}
+
+.as-upperDiv {
+  display: flex;
+  flex-shrink: 0;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  border-radius: 5px;
+  position: relative;
+  height: 4rem;
+  width: 100%;
+  max-width: 1440px;
+  background-color: #f5f5f5;
+  line-height: 1.5;
+}
+
+.as-checkmarkPlacement {
+  display: flex;
+  margin-left: 2rem;
+  box-sizing: border-box;
+}
+
+.as-checkmark {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+  animation: magic-bloop 0.4s ease-out forwards;
+}
+
+svg.as-checkmarkSVG {
+  width: 1.5rem;
+  height: 1.5rem;
+  box-sizing: border-box;
+}
+
+.as-addToCart {
+  display: flex;
+  align-items: center;
+  margin-left: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: bold;
+  animation: slide-right 0.4s ease-out 0.2s forwards;
+  animation-fill-mode: forwards;
+}
+
+.as-closeButton {
+  position: absolute;
+  background-color: transparent;
+  z-index: 1;
+  margin: 1.25rem 2rem;
+  padding: 0;
+  height: 1.5rem;
+  right: 0;
+  top: 0;
+  border: none;
+  cursor: pointer;
+  line-height: 1.5;
+}
+
+.as-closeIcon {
+  width: 1.5rem;
+  height: 1.5rem;
+  cursor: pointer;
+  line-height: 1.5;
+}
+
+.as-middleDiv {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  max-height: calc(100vh - 80px);
+  padding: 0.5rem 0 0;
+  -webkit-box-pack: start;
+  justify-content: flex-start;
+  overflow-x: auto;
+  overflow-y: auto;
+  width: 100%;
+}
+
+.as-h4 {
+  text-align: left;
+  padding: 0 2rem;
+  font-size: 1.5rem;
+  line-height: 1.3334;
+  letter-spacing: -0.42px;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.as-pairsWellWith {
+  margin: 0;
+  padding: 0 4rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  list-style-type: disc;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+}
+
+.as-pairsWellWithEntry {
+  padding: 2rem 1rem;
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+}
+
+.as-bottomDiv {
+  justify-content: flex-end;
+  padding: 1rem 0 1rem 0;
+  -webkit-box-pack: end;
+  display: -webkit-flex;
+  border-top: 1px solid #ccc;
+  width: 100%;
+}
+
+.as-innerDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-right: 1rem;
+  background-color: white;
+  color: black;
+  padding: 0.75rem 1.5rem;
+  position: relative;
+  text-align: center;
+  display: inline-block;
+  font-weight: 700;
+  font-size: 0.875rem;
+  line-height: 1.7143;
+  transition-duration: 0.3s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0, 1);
+  transition-property: background-color, border-radius, width;
+}
+
+.as-innerDiv:hover {
+  background-color: #e8e8e8;
+}
+
+.as-cartSpan {
+  color: #111;
+  text-align: center;
+  font-weight: 700;
+  font-size: 0.875rem;
+  line-height: 1.7143;
+  cursor: pointer;
+}
+
+.as-cartIcon {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 0.5rem;
+  vertical-align: middle;
+}
+
+.as-shoppingListBackDrop {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 50px;
+}
+
+.as-shoppingListModalStyle {
+  box-sizing: border-box;
+  transform: translate(-50%, -3rem);
+  border-radius: 5px;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  background-color: #fff;
+  transition: all 400ms ease;
+  padding: 0;
+  margin: 0 auto;
+  left: 50%;
+  bottom: 40%;
+  position: absolute;
+  flex: 0 0 66.66667%;
+  max-width: 66.66667%;
+}
+
+.as-shoppingListCloseButton {
+  background-color: #fff;
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  right: 0;
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+  line-height: 1.5;
+}
+
+.as-mainPopup {
+  min-width: 23rem;
+  padding: 2rem 1rem;
+  transition: all 1s ease;
+  word-break: break-word;
+  text-align: center;
+  font-family: "Noto sans", sans-serif;
+}
+
+.as-listButton {
+  cursor: pointer;
+  background: #0058a3;
+  color: #fff;
+  border-radius: 2px;
+  padding: 0.75rem 1.5rem;
+  position: relative;
+  text-align: center;
+  display: inline-block;
+  text-decoration: none;
+  border: 0;
+  font-weight: 700;
+  font-size: 0.875rem;
+  line-height: 1.7143;
+  transition-duration: 0.3s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0, 1);
+  width: 85%;
+}
+
+.as-listButton:hover {
+  background-color: #2c75b3;
+}
+
+/* thank you david kim */

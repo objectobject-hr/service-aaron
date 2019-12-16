@@ -7,6 +7,7 @@ import testData from "../data/testData.js";
 import data from "../data/data.js";
 import ShowAllHistory from "../components/ShowAllHistory.jsx";
 import Footer from "./Footer.jsx";
+import StickyFooter from "./StickyFooter.jsx";
 import Modal from "./Modal.jsx";
 
 class App extends React.Component {
@@ -24,9 +25,9 @@ class App extends React.Component {
   }
 
   toggleModal() {
-    this.setState({
-      modalState: !this.state.modalState
-    });
+    // this.setState({
+    //   modalState: !this.state.modalState
+    // });
   }
 
   // onClose(e) {
@@ -74,7 +75,8 @@ class App extends React.Component {
               fontFamily: "Noto Sans, sans-serif",
               fontSize: "30px",
               fontWeight: 700,
-              zIndex: -999
+              zIndex: -999,
+              paddingTop: 40
               // backgroundColor: "red"
             }}
           >
@@ -106,11 +108,12 @@ class App extends React.Component {
           <div className="as-modal">
             {/* <button onClick={this.toggleModal}> Open modal </button> */}
             <div className="as-hoverModal">
-              <Modal
+              <StickyFooter
                 show={this.state.modalState}
-                // onClose={this.toggleModal}
-                product={this.state.onLoadProducts[0]}
-              ></Modal>
+                onClose={this.toggleModal}
+                productDisplay={this.state.onLoadProducts[0]}
+                products={this.state.onLoadProducts}
+              ></StickyFooter>
             </div>
           </div>
         </div>
