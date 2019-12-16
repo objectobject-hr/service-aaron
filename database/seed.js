@@ -209,7 +209,9 @@ const createProducts = () => {
 };
 
 const seedDatabase = products => {
+  // db.deleteAll();
   db.save(products, (err, results) => {
+    console.log(`creating products`);
     if (err) {
       console.error(err);
     }
@@ -218,4 +220,5 @@ const seedDatabase = products => {
 };
 
 createProducts();
+db.deleteAll();
 seedDatabase(data);
