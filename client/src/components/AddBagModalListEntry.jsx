@@ -32,7 +32,7 @@ const ratingHandler = unroundedRate => {
 };
 
 const AddBagModalListEntry = props => {
-  console.log(props.data.itemimage);
+  // console.log(props.data.itemimage);
   return (
     <div
       className="as-styledLikeItem"
