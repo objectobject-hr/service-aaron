@@ -62,6 +62,7 @@ class App extends React.Component {
   componentDidMount() {
     this.getAll();
     window.addEventListener("scroll", e => this.handleScroll(e));
+    console.log(`rendering`);
     // console.log(`actual onLoadProducts: `, this.state.onLoadProducts)
   }
 
@@ -120,7 +121,7 @@ class App extends React.Component {
           <div
             className="as-modal"
             style={
-              this.state.position > 100
+              this.state.position > 554
                 ? {
                     position: "fixed",
                     bottom: "20px",
@@ -130,7 +131,7 @@ class App extends React.Component {
                   }
                 : {
                     position: "absolute",
-                    bottom: "-100%",
+                    bottom: "-100px",
                     right: "200px",
                     transform: "translateY(3rem)",
                     transition: "ease 2s"
