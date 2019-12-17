@@ -18,8 +18,7 @@ class App extends React.Component {
       onLoadProducts: [],
       shownProducts: [],
       modalState: true,
-      position: 0,
-      scrollDirection: ""
+      position: 0
     };
 
     this.getAll = this.getAll.bind(this);
@@ -58,16 +57,6 @@ class App extends React.Component {
       },
       () => console.log(this.state.position)
     );
-
-    if (positionDifference > 0) {
-      this.setState({
-        scrollDirection: "down"
-      });
-    } else {
-      this.setState({
-        scrollDirection: "up"
-      });
-    }
   }
 
   componentDidMount() {
