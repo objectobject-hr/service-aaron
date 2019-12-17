@@ -48,7 +48,7 @@ const deleteAll = (req, callback) => {
       callback(err);
     } else {
       console.log(`you're in Product.remove else-statement`);
-      callback(null, results);
+      // callback(null, results);
     }
   });
 };
