@@ -75,9 +75,9 @@
 }
 
 .as-modal {
-  position: fixed;
+  /* position: fixed;
   bottom: 20px;
-  right: 200px;
+  right: 200px; */
 }
 
 .as-hoverModal {

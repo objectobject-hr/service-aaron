@@ -17,7 +17,9 @@ class App extends React.Component {
     this.state = {
       onLoadProducts: [],
       shownProducts: [],
-      modalState: true
+      modalState: true,
+      position: 0,
+      scrollDirection: ""
     };
 
     this.getAll = this.getAll.bind(this);
@@ -48,8 +50,29 @@ class App extends React.Component {
       .catch(err => console.error(err));
   }
 
+  handleScroll(e) {
+    var positionDifference = e.path[1].pageYOffset - this.state.position;
+    this.setState(
+      {
+        position: e.path[1].pageYOffset
+      },
+      () => console.log(this.state.position)
+    );
+
+    if (positionDifference > 0) {
+      this.setState({
+        scrollDirection: "down"
+      });
+    } else {
+      this.setState({
+        scrollDirection: "up"
+      });
+    }
+  }
+
   componentDidMount() {
     this.getAll();
+    window.addEventListener("scroll", e => this.handleScroll(e));
     // console.log(`actual onLoadProducts: `, this.state.onLoadProducts)
   }
 
@@ -105,7 +128,26 @@ class App extends React.Component {
             <Footer></Footer>
           </div>
 
-          <div className="as-modal">
+          <div
+            className="as-modal"
+            style={
+              this.state.position > 100
+                ? {
+                    position: "fixed",
+                    bottom: "20px",
+                    transform: "translateY(0%)",
+                    transition: "ease 2s",
+                    right: "200px"
+                  }
+                : {
+                    position: "absolute",
+                    bottom: "-100%",
+                    right: "200px",
+                    transform: "translateY(3rem)",
+                    transition: "ease 2s"
+                  }
+            }
+          >
             {/* <button onClick={this.toggleModal}> Open modal </button> */}
             <div className="as-hoverModal">
               <StickyFooter

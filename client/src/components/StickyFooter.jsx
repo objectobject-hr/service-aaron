@@ -12,6 +12,8 @@ class StickyFooter extends React.Component {
       modalProducts: this.props.products,
       addList: false,
       addBag: false
+      // position: 0,
+      // scrollDirection: ""
     };
 
     this.showList = this.showList.bind(this);
@@ -37,6 +39,30 @@ class StickyFooter extends React.Component {
       // () => console.log(this.state.addBag)
     );
   }
+
+  // handleScroll(e) {
+  //   var positionDifference = e.path[1].pageYOffset - this.state.position;
+  //   this.setState(
+  //     {
+  //       position: e.path[1].pageYOffset
+  //     },
+  //     () => console.log(this.state.position)
+  //   );
+
+  //   if (positionDifference > 0) {
+  //     this.setState({
+  //       scrollDirection: "down"
+  //     });
+  //   } else {
+  //     this.setState({
+  //       scrollDirection: "up"
+  //     });
+  //   }
+  // }
+
+  // componentDidMount() {
+  //   window.addEventListener("scroll", e => this.handleScroll(e));
+  // }
 
   render() {
     // Render nothing if the "show" prop is false
