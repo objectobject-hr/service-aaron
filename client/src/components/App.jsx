@@ -51,18 +51,15 @@ class App extends React.Component {
 
   handleScroll(e) {
     var positionDifference = e.path[1].pageYOffset - this.state.position;
-    this.setState(
-      {
-        position: e.path[1].pageYOffset
-      },
-      () => console.log(this.state.position)
-    );
+    this.setState({
+      position: e.path[1].pageYOffset
+    });
   }
 
   componentDidMount() {
     this.getAll();
     window.addEventListener("scroll", e => this.handleScroll(e));
-    console.log(`rendering`);
+    // console.log(`rendering`);
     // console.log(`actual onLoadProducts: `, this.state.onLoadProducts)
   }
 
@@ -125,16 +122,16 @@ class App extends React.Component {
                 ? {
                     position: "fixed",
                     bottom: "20px",
-                    transform: "translateY(0%)",
-                    transition: "ease 2s",
+                    transform: "translateY(0)",
+                    transition: "ease 1s",
                     right: "200px"
                   }
                 : {
-                    position: "absolute",
+                    position: "fixed",
                     bottom: "-100px",
                     right: "200px",
                     transform: "translateY(3rem)",
-                    transition: "ease 2s"
+                    transition: "ease 1s"
                   }
             }
           >
